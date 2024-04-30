@@ -26,5 +26,19 @@ class StringManipulatorTest {
 
     @Test
     void isPalindrome() {
+        // Arrange
+        String input = "abba";
+        StringManipulator palindrom = new StringManipulator();
+        assertTrue(palindrom.isPalindrome(input));
+
+        assertAll(() -> { assertTrue(palindrom.isPalindrome("qwewq"));
+                          assertFalse(palindrom.isPalindrome("asdf"));
+                          assertFalse(palindrom.isPalindrome("lkjhg"));
+                          assertTrue(palindrom.isPalindrome("lkjkl"));}
+                );
+
+       // assertAll(() -> assertEquals(TRUE, sm.reverseString("abba"))
+
+
     }
 }
