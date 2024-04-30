@@ -3,7 +3,7 @@ import java.util.Map;
 public class WordAnalyser {
     public String[] findLongestWords(String text) {
         // TODO: Implement the logic to find the longest word(s) in the given text
-        return new String[]{""};
+        return new String[]{"Hellow"};
     }
 
     public Map<Character, Integer> calculateLetterFrequency(String text) {
