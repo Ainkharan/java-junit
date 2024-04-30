@@ -31,13 +31,14 @@ class StringManipulatorTest {
         StringManipulator palindrom = new StringManipulator();
         assertTrue(palindrom.isPalindrome(input));
 
-        assertAll(() -> { assertTrue(palindrom.isPalindrome("qwewq"));
-                          assertFalse(palindrom.isPalindrome("asdf"));
-                          assertFalse(palindrom.isPalindrome("lkjhg"));
-                          assertTrue(palindrom.isPalindrome("lkjkl"));}
+        assertAll(() -> { assertTrue(palindrom.isPalindrome("madam"));
+                          assertFalse(palindrom.isPalindrome("london"));
+                          assertFalse(palindrom.isPalindrome("Birmingham"));
+                          assertTrue(palindrom.isPalindrome("civic"));
+                          assertTrue(palindrom.isPalindrome("noon"));}
                 );
 
-       // assertAll(() -> assertEquals(TRUE, sm.reverseString("abba"))
+
 
 
     }
