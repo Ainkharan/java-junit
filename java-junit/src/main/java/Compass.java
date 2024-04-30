@@ -14,6 +14,6 @@ public class Compass {
     private Point point;
 
     public static Point rotate(Point point, Direction direction){
-        return Point.NORTH;
+        return Point.EAST;
     }
 }
