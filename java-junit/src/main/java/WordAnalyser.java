@@ -31,8 +31,11 @@ public class WordAnalyser {
 
     public Map<Character, Integer> calculateLetterFrequency(String text) {
         // TODO: Implement the logic to calculate the frequency of each letter in the given text
-        Map <Character, Integer> expectedOutput = new HashMap<>();
-        expectedOutput.put('a',1);
-        return expectedOutput;
+        Map <Character, Integer> output = new HashMap<>();
+        String strippedString = text.replace(" ","");
+        for (int i = 0; i < strippedString.length(); i++) {
+            output.put(strippedString.charAt(i), output.getOrDefault(strippedString.charAt(i), 0) + 1);
+        }
+        return output;
     }
 }

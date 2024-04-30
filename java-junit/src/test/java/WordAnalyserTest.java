@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.Map.entry;
 import static org.junit.jupiter.api.Assertions.*;
 
 class WordAnalyserTest {
@@ -40,8 +41,17 @@ class WordAnalyserTest {
         Map<Character, Integer> actualOutput= wa.calculateLetterFrequency(str);
 
        // Assert
-        assertEquals(expectedOutput,actualOutput);
-
+        assertEquals(Map.of('a',1),actualOutput);
+        assertAll(() -> {assertEquals(Map.of(), wa.calculateLetterFrequency(""));
+                         assertEquals(Map.ofEntries(entry('h',1),
+                                                    entry('e',1),
+                                                    entry('l',2),
+                                                    entry('o',1)), wa.calculateLetterFrequency("hello"));
+//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
+//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
+//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
+        });
 
     }
+
 }
