@@ -15,10 +15,17 @@ class ShoppingCartTest {
         sc.addItems(item, price);
         sc.addItems("hot dogs", 1.0);
         sc.addItems("beans", 1.5);
+        sc.addItems("Orange",0.3);
+        sc.addItems("hot dogs",1.4);
 
         //Assert
-        assertEquals(3, sc.getItems().size());
+        assertEquals(4, sc.getItems().size());
         assertEquals(0.5, sc.getItems().get("apple"));
+        assertEquals(0.3, sc.getItems().get("Orange"));
+        assertEquals(1.4, sc.getItems().get("hot dogs"));
+
+
+
     }
 
     @Test
