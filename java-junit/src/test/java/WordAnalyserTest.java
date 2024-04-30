@@ -16,9 +16,11 @@ class WordAnalyserTest {
 
         //Assert
         assertArrayEquals(expectedOutput,actualOutput);
-        assertAll(()->{ assertArrayEquals({"programming"},"Java is the best progamming language"));
-                        assertArrayEquals(String[]{"weeks"},"Day of the weeks"));
-                        assertArrayEquals(String[]{"London"},"City of London"));
+        assertAll(()->{ assertArrayEquals(new String[]{"programming"},wa.findLongestWords("Java is the best programming language"));
+                        assertArrayEquals(new String[]{"weeks"},wa.findLongestWords("Day of the weeks"));
+                        assertArrayEquals(new String[]{"London"},wa.findLongestWords("City of London"));
+                        assertArrayEquals(new String[]{"Three", "Seven"},wa.findLongestWords("One Two Three Four Five Six Seven"));
+                        assertArrayEquals(new String[]{},wa.findLongestWords(""));
         });
 
 
