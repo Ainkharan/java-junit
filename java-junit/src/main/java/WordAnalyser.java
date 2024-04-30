@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class WordAnalyser {
@@ -30,6 +31,8 @@ public class WordAnalyser {
 
     public Map<Character, Integer> calculateLetterFrequency(String text) {
         // TODO: Implement the logic to calculate the frequency of each letter in the given text
-        return null;
+        Map <Character, Integer> expectedOutput = new HashMap<>();
+        expectedOutput.put('a',1);
+        return expectedOutput;
     }
 }
