@@ -47,9 +47,15 @@ class WordAnalyserTest {
                                                     entry('e',1),
                                                     entry('l',2),
                                                     entry('o',1)), wa.calculateLetterFrequency("hello"));
-//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
-//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
-//                         assertEquals(Map.of(), wa.calculateLetterFrequency(""));
+                         assertEquals(Map.ofEntries(entry('C',1),
+                                                    entry('i',1),
+                                                     entry('t',1),
+                                                    entry('y',1),
+                                                     entry('O',1),
+                                                     entry('f',1)), wa.calculateLetterFrequency("City Of"));
+                         assertEquals(Map.ofEntries(entry('h',1),
+                                                    entry('i',1)), wa.calculateLetterFrequency("hi!"));
+                         assertEquals(Map.ofEntries(), wa.calculateLetterFrequency("7.5"));
         });
 
     }

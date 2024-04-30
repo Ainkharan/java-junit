@@ -31,11 +31,18 @@ public class WordAnalyser {
 
     public Map<Character, Integer> calculateLetterFrequency(String text) {
         // TODO: Implement the logic to calculate the frequency of each letter in the given text
+
         Map <Character, Integer> output = new HashMap<>();
         String strippedString = text.replace(" ","");
         for (int i = 0; i < strippedString.length(); i++) {
-            output.put(strippedString.charAt(i), output.getOrDefault(strippedString.charAt(i), 0) + 1);
+            if(isLetter(strippedString.charAt(i))) {
+                output.put(strippedString.charAt(i), output.getOrDefault(strippedString.charAt(i), 0) + 1);
+            }
         }
         return output;
+    }
+
+    private boolean isLetter(char c){
+        return (c >= 65 && c <= 90) || (c >= 97 && c <= 122);
     }
 }
