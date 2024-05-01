@@ -10,7 +10,11 @@ public class ShoppingCart {
     }
 
     public double calculateTotal(){
-        return 0.0;
+        double total = 0.0;
+        for (double d : this.items.values()) {
+            total+=d;
+        }
+        return total;
     }
 
     public Map<String, Double> getItems() {
